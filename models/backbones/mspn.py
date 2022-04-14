@@ -492,13 +492,12 @@ class MSPN(BaseBackbone):
                     state_dict['top'][k.replace('bn1', 'top.0.bn')] = v
 
             load_state_dict(
-                self.top, state_dict['top'], strict=False, logger=logger)
+                self.top, state_dict['top'], strict=False)#, logger=logger)
             for i in range(self.num_stages):
                 load_state_dict(
                     self.multi_stage_mspn[i].downsample,
                     state_dict['bottlenecks'],
-                    strict=False,
-                    logger=logger)
+                    strict=False)#,logger=logger)
         else:
             for m in self.multi_stage_mspn.modules():
                 if isinstance(m, nn.Conv2d):

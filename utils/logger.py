@@ -22,4 +22,5 @@ def get_root_logger(log_file=None, log_level=logging.INFO):
     Returns:
         logging.Logger: The root logger.
     """
+    # print("===========l",logging.getLogger(__name__.split('.')[0]))
     return get_logger(__name__.split('.')[0], log_file, log_level)

@@ -12,7 +12,7 @@ from .topdown_mpii_trb_dataset import TopDownMpiiTrbDataset
 from .topdown_ochuman_dataset import TopDownOCHumanDataset
 from .topdown_posetrack18_dataset import TopDownPoseTrack18Dataset
 from .topdown_posetrack18_video_dataset import TopDownPoseTrack18VideoDataset
-
+from .tiny_dataset import PoseDataset
 __all__ = [
     'TopDownAicDataset',
     'TopDownCocoDataset',
@@ -26,5 +26,5 @@ __all__ = [
     'TopDownMhpDataset',
     'TopDownH36MDataset',
     'TopDownHalpeDataset',
-    'TopDownPoseTrack18VideoDataset',
+    'TopDownPoseTrack18VideoDataset','PoseDataset'
 ]
